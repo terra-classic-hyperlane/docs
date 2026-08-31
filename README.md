@@ -1,9 +1,14 @@
 # Terra Classic Hyperlane — Documentation Hub
 
-One entry point for everything around the Hyperlane deployment on
-**Terra Classic** (`columbus-5`, domain **132556**) and its warp routes to
-**BSC**, **Ethereum** and **Solana**. Each section below sends you to the right
-guide in the right repository.
+Community-run [Hyperlane](https://hyperlane.xyz) interoperability for
+**Terra Classic** (`columbus-5`, domain **132556**) — bridging **LUNC** and
+**USTC** to **BSC**, **Ethereum** and **Solana**, secured by a community
+validator set and paid through an on-chain relayer-reward vault.
+
+**🌉 Just want to bridge? → https://terraclassic-bridge.xyz**
+
+This page is the single entry point for everything else — each section sends
+you to the right guide in the right repository.
 
 | I want to… | Go to |
 |---|---|
