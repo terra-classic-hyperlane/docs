@@ -22,8 +22,9 @@ proof of delivery (the chain's own execution record) releases your commission.
 
 ## 0. Prerequisites
 
-- A Linux VPS (root), Node.js **≥ 20**, Docker (only to pull the official relayer
-  image), and `git`.
+- A Linux VPS (root), Node.js **≥ 20**, and `git`. For the relayer binary you
+  need **either** a working Rust toolchain to compile it (Option A) **or** Docker
+  just to extract the prebuilt binary (Option B) — see §1.
 - The two code repos on the VPS:
   ```bash
   git clone https://github.com/terra-classic-hyperlane/proof-of-delivery.git
@@ -47,9 +48,52 @@ proof of delivery (the chain's own execution record) releases your commission.
 
 ## 1. Install the official relayer
 
-The relayer is the **official Hyperlane binary, with zero code changes** — you
-extract it from the published Docker image rather than compiling (the VPS
-toolchain hits a rustc/edition2024 mismatch).
+The relayer is the **official Hyperlane binary, with zero code changes**, and it
+runs as a **native `systemd` service** — not in Docker. There are two ways to get
+the binary onto the VPS; both end at the same native `hyperlane-relayer.service`.
+Pick **A** if you can compile, **B** if the VPS toolchain fails.
+
+### Option A — native binary via the automated installer (recommended)
+
+The [hyperlane-validator](https://github.com/terra-classic-hyperlane/hyperlane-validator)
+repo ships `install-vps.sh`, which builds the **validator and relayer from source**
+and installs both as native systemd services in one shot — no Docker. This is how
+the production VPS is set up.
+
+```bash
+# on the machine that has ~/hyperlane-monorepo checked out:
+cd hyperlane-validator
+./install-vps.sh --vps <VPS_IP> --mode native --network mainnet
+#   --user root  --dir /root/hyperlane   (defaults)
+#   --force-rebuild   to recompile even if binaries already exist
+```
+
+What it does: generates the JSON configs from your `.env` + templates, syncs
+block heights, then per-agent `cargo build --release`
+(`~/hyperlane-monorepo/rust/main/agents/relayer`), uploads the binary to
+`/root/hyperlane/bin/relayer`, and installs the systemd unit. If a compiled
+binary already exists it offers to **reuse it and skip the 15–30 min build**.
+Full flow: the validator repo's
+[README](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/README.md)
+and [manual VPS guide](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/hyperlane-validator-relayer-vps-english.md)
+(the same script installs the validator — §"validators" — so one run sets up both).
+
+To build the relayer binary by hand instead (what the installer automates):
+
+```bash
+cd ~/hyperlane-monorepo/rust/main/agents/relayer
+cargo build --release          # → ../../target/release/relayer
+cp ~/hyperlane-monorepo/rust/main/target/release/relayer /root/hyperlane/bin/relayer
+```
+
+> ⚠️ Compiling on the VPS itself can hit a **rustc 1.84 vs edition2024** mismatch
+> in newer deps. Build on a machine with a current toolchain, or use Option B.
+
+### Option B — extract the official binary from the Docker image (no compiling)
+
+When you can't compile, take the prebuilt binary straight out of the official
+image. Docker is used **only to extract the file** — the relayer still runs
+natively via systemd, never as a container.
 
 ```bash
 # 1. pull the official image (agents-v2.0.0)
@@ -62,6 +106,28 @@ docker cp $C:/app/relayer /root/hyperlane/bin/relayer
 docker rm $C
 chmod +x /root/hyperlane/bin/relayer
 ```
+
+### The native systemd service (both options)
+
+However you got the binary, it runs from `/root/hyperlane/bin/relayer` under
+`hyperlane-relayer.service`. The unit as configured on the production VPS:
+
+```ini
+[Service]
+WorkingDirectory=/root/hyperlane/runtime
+EnvironmentFile=/root/hyperlane/.env
+Environment=CONFIG_FILES=/root/hyperlane/config/agent-config.mainnet.json,/root/hyperlane/config/relayer.mainnet.json
+ExecStartPre=/bin/bash -c 'mkdir -p /tmp/hyp/relayer/cache'
+ExecStart=/root/hyperlane/bin/relayer --db /tmp/hyp/relayer/cache --allowLocalCheckpointSyncers false --metrics 0.0.0.0:9091
+Restart=always
+# drop-in .../hyperlane-relayer.service.d/limits.conf:
+LimitNOFILE=1048576
+```
+
+`WorkingDirectory` must contain a `config/` subdir with the monorepo's
+`mainnet_config.json` (the binary reads `./config/*.json` at startup); keys come
+from the `.env` via `EnvironmentFile`, never hardcoded. `install-vps.sh` writes
+this unit for you.
 
 Config lives in `/root/hyperlane/config/` (chain registry + relayer config). Use
 the templates in the validator repo (`hyperlane/relayer.mainnet.json.template`,
