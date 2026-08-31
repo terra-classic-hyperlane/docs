@@ -30,6 +30,7 @@ Repository: [**hyperlane-validator**](https://github.com/terra-classic-hyperlane
 - [Docker installation guide](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/DOCKER-INSTALLATION-GUIDE.md) · [VPS without Docker](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/hyperlane-validator-relayer-vps-english.md)
 - [AWS S3 + keys guide](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/GUIDE-AWS-S3-AND-KEYS.md) — checkpoint storage the relayers read
 - [Private keys in hex format](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/HYPERLANE-PRIVATE-KEYS-HEX.md) · [Configuration files reference](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/hyperlane-configuration-files-guide.md)
+- [Log management](https://github.com/terra-classic-hyperlane/hyperlane-validator/blob/main/LOG-MANAGEMENT.md) — keep validator/relayer logs from filling the disk (size-triggered rotation)
 - **Become a rewarded TCV validator** (announce, register as operator, earn from the vault): [TCV Validator Mainnet Guide](https://github.com/terra-classic-hyperlane/proof-of-delivery/blob/main/docs/TCV-VALIDATOR-MAINNET-GUIDE.md) and [Operators & Validators guide](https://github.com/terra-classic-hyperlane/proof-of-delivery/blob/main/docs/OPERATORS-VALIDATORS-GUIDE.md)
 
 ## 2. Run the Relayer — vault & agents
