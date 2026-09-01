@@ -12,9 +12,6 @@ the project's official website on
 [CoinGecko](https://www.coingecko.com/en/coins/terra-luna-classic)
 (https://terraclassic-bridge.xyz also works).
 
-> ⚠️ **The warp contracts are still undergoing changes** — contract addresses
-> referenced across these guides may change.
-
 This page is the single entry point for everything else — each section sends
 you to the right guide in the right repository.
 
