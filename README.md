@@ -5,7 +5,15 @@ Community-run [Hyperlane](https://hyperlane.xyz) interoperability for
 **USTC** to **BSC**, **Ethereum** and **Solana**, secured by a community
 validator set and paid through an on-chain relayer-reward vault.
 
-**🌉 Just want to bridge? → https://terraclassic-bridge.xyz**
+**🌉 Just want to bridge? → https://bridge.terra-classic.io** — official
+subdomain of [terra-classic.io](https://terra-classic.io), the site listed as
+the project's official website on
+[CoinMarketCap](https://coinmarketcap.com/currencies/terra-luna/) and
+[CoinGecko](https://www.coingecko.com/en/coins/terra-luna-classic)
+(https://terraclassic-bridge.xyz also works).
+
+> ⚠️ **The warp contracts are still undergoing changes** — contract addresses
+> referenced across these guides may change.
 
 This page is the single entry point for everything else — each section sends
 you to the right guide in the right repository.
@@ -112,7 +120,7 @@ Everything deployed is verifiable byte-for-byte against the chains:
 
 | What | Where |
 |---|---|
-| Bridge UI (transfer LUNC/USTC) | https://terraclassic-bridge.xyz |
+| Bridge UI (transfer LUNC/USTC) | https://bridge.terra-classic.io (subdomain of the official [terra-classic.io](https://terra-classic.io); https://terraclassic-bridge.xyz also works) |
 | Message explorer | [hyperlane-explorer](https://github.com/terra-classic-hyperlane/hyperlane-explorer) |
 | Registry the UI reads | [hyperlane-registry, branch `terra-classic-warp`](https://github.com/terra-classic-hyperlane/hyperlane-registry/tree/terra-classic-warp/deployments/warp_routes) |
 | Official Hyperlane registry | `columbus-5` canonical since [PR #1559](https://github.com/hyperlane-xyz/hyperlane-registry/pull/1559) (2026-08-20) |
