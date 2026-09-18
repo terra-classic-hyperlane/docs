@@ -24,6 +24,7 @@ you to the right guide in the right repository.
 | Change **ISM or IGP** on any chain | [§5](#5-changing-ism--igp--who-can-change-what) |
 | **Audit** contracts, hashes and live routes | [§6](#6-audit-deployment-records--hashes) |
 | Use the **bridge UI / explorer / registry** | [§7](#7-live-infrastructure) |
+| See **governance proposals & how the community funds were spent** | [§8](#8-governance-funding--accountability) |
 
 ---
 
@@ -112,6 +113,7 @@ Everything deployed is verifiable byte-for-byte against the chains:
   [DEPLOY-HASHES.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/DEPLOY-HASHES.md)
 - **Per-route audit references:** [WARP-LUNC.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/WARP-LUNC.md) · [WARP-USTC.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/WARP-USTC.md)
 - **Vault & governor contracts audit:** [proof-of-delivery AUDIT.md](https://github.com/terra-classic-hyperlane/proof-of-delivery/blob/main/docs/install/AUDIT.md)
+- **Where the community's SOL went** (proposal #12222, every tx and rent): [SOLANA-FUNDING-REPORT.md](SOLANA-FUNDING-REPORT.md) — see §8
 
 ## 7. Live infrastructure
 
@@ -122,6 +124,19 @@ Everything deployed is verifiable byte-for-byte against the chains:
 | Registry the UI reads | [hyperlane-registry, branch `terra-classic-warp`](https://github.com/terra-classic-hyperlane/hyperlane-registry/tree/terra-classic-warp/deployments/warp_routes) |
 | Official Hyperlane registry | `columbus-5` canonical since [PR #1559](https://github.com/hyperlane-xyz/hyperlane-registry/pull/1559) (2026-08-20) |
 
+## 8. Governance, funding & accountability
+
+Two on-chain proposals authorised this work on `columbus-5`:
+
+| Proposal | What it decided | Report |
+|---|---|---|
+| [**#12200**](https://finder.terraclassic.community/mainnet/proposal/12200) — *Hyperlane Integration on Terra Classic — Multichain Connectivity with Ethereum, BSC, and Solana* (passed 2025-11-17) | authorised the integration; the Terra Classic core contracts and the EVM side were deployed at the developer's own cost | [core deployment record](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/HYPERLANE_DEPLOYMENT-MAINNET_EN.md) |
+| [**#12222**](https://finder.terraclassic.community/mainnet/proposal/12222) — *Hyperlane Warp Routes - Solana Mainnet Deployment Funding (LUNC/USTC/CW20)* (passed 2026-07-01) | Community Pool spend of **9,873,590 LUNC** to buy the SOL for the Solana programs (IGP, ISM, warp LUNC, warp USTC) | **[SOLANA-FUNDING-REPORT.md](SOLANA-FUNDING-REPORT.md)** — the accountability report: LUNC → SOL conversion trail, cost of every program, reconciliation to the current wallet balance, what was covered by the developer, what is recoverable |
+
+- **Proposal texts:** [funding-proposal.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/archive/funding-proposal.md) (EN) · [financiamento.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/archive/financiamento.md) (PT) · [proposal JSON](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/archive/solana-funding-proposal.json)
+- **Interim cost report (July 2026, superseded):** [MAINNET-DEPLOY-COST-REPORT.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/archive/MAINNET-DEPLOY-COST-REPORT.md)
+- **Ownership handoff to the validators' multisig** (pending — see §5): [TRANSFER-SOLANA-OWNERSHIP.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/archive/TRANSFER-SOLANA-OWNERSHIP.md)
+
 ## Repositories
 
 | Repo | Purpose |
@@ -131,4 +146,4 @@ Everything deployed is verifiable byte-for-byte against the chains:
 | [proof-of-delivery](https://github.com/terra-classic-hyperlane/proof-of-delivery) | Relayer-reward vault, oracle-agent (governed gas prices), claim agents, operator guides |
 | [hyperlane-registry](https://github.com/terra-classic-hyperlane/hyperlane-registry) | Registry fork — branch `terra-classic-warp` feeds the bridge UI |
 | [hyperlane-explorer](https://github.com/terra-classic-hyperlane/hyperlane-explorer) | Cross-chain message explorer |
-| [docs](https://github.com/terra-classic-hyperlane/docs) | This hub |
+| [docs](https://github.com/terra-classic-hyperlane/docs) | This hub — plus [RELAYER-OPERATOR.md](RELAYER-OPERATOR.md) and [SOLANA-FUNDING-REPORT.md](SOLANA-FUNDING-REPORT.md) |
