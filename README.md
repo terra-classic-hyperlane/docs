@@ -15,6 +15,9 @@ the project's official website on
 This page is the single entry point for everything else — each section sends
 you to the right guide in the right repository.
 
+**📬 Official contact:** `bridge@terra-classic.io` — a community address delivered
+to the bridge's ISM validators; policy and custodians in [CONTACT.md](CONTACT.md).
+
 | I want to… | Go to |
 |---|---|
 | Run a **validator** | [§1](#1-run-a-validator) |
@@ -146,4 +149,4 @@ Two on-chain proposals authorised this work on `columbus-5`:
 | [proof-of-delivery](https://github.com/terra-classic-hyperlane/proof-of-delivery) | Relayer-reward vault, oracle-agent (governed gas prices), claim agents, operator guides |
 | [hyperlane-registry](https://github.com/terra-classic-hyperlane/hyperlane-registry) | Registry fork — branch `terra-classic-warp` feeds the bridge UI |
 | [hyperlane-explorer](https://github.com/terra-classic-hyperlane/hyperlane-explorer) | Cross-chain message explorer |
-| [docs](https://github.com/terra-classic-hyperlane/docs) | This hub — plus [RELAYER-OPERATOR.md](RELAYER-OPERATOR.md) and [SOLANA-FUNDING-REPORT.md](SOLANA-FUNDING-REPORT.md) |
+| [docs](https://github.com/terra-classic-hyperlane/docs) | This hub — plus [RELAYER-OPERATOR.md](RELAYER-OPERATOR.md), [SOLANA-FUNDING-REPORT.md](SOLANA-FUNDING-REPORT.md) and [CONTACT.md](CONTACT.md) |
