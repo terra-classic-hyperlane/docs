@@ -12,9 +12,9 @@
       ]
     }
   ],
-  "metadata": "{\"title\":\"Hyperlane on Terra Classic — Delivery Report & Payment Proposal\",\"summary\":\"Payment for the completed Hyperlane integration (#12200). https://discourse.luncgoblins.com/t/hyperlane-on-terra-classic-delivery-report-payment-proposal/563\"}",
+  "metadata": "{\"title\":\"Hyperlane on Terra Classic — Delivery Report & Payment Proposal\",\"summary\":\"https://discourse.luncgoblins.com/t/hyperlane-on-terra-classic-delivery-report-payment-proposal/563\"}",
   "deposit": "5000000000000uluna",
   "title": "Hyperlane on Terra Classic — Delivery Report & Payment Proposal",
-  "summary": "Payment for the completed Hyperlane integration on Terra Classic approved in proposal #12200 (USD 12,000 budget). LUNC and USTC bridge between Terra Classic, Ethereum, BNB Smart Chain and Solana; Terra Classic contracts owned and administered by on-chain governance (#12229, #12230); synthetic side controlled by the validators' 4-of-6 multisigs (Safe on EVM, Squads on Solana); 6-validator set, threshold 4; officially registered with Hyperlane (hyperlane-registry PRs #1559 and #1687). Community Pool spend of 253,074,165.29 LUNC to terra14yvuxm40affmkt36m2ummvzvlka25u3ucurxjl. Full delivery report, contract inventory and links: https://discourse.luncgoblins.com/t/hyperlane-on-terra-classic-delivery-report-payment-proposal/563",
+  "summary": "Payment for the completed Hyperlane integration (#12200): LUNC/USTC bridge to ETH, BSC and Solana, governance-owned contracts. https://discourse.luncgoblins.com/t/hyperlane-on-terra-classic-delivery-report-payment-proposal/563",
   "expedited": false
 }
