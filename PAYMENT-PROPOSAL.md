@@ -40,7 +40,7 @@ The Hyperlane integration approved in #12200 is **complete and in production**:
 - The Terra Classic infrastructure is **owned and administered by on-chain governance** — not by the
   developer (proposals #12229 and #12230, both passed).
 - The synthetic side is controlled by **4-of-6 multisigs of the bridge validators** (Safe on EVM,
-  Squads on Solana); three remaining EVM items are listed openly in §4.3.
+  Squads on Solana).
 - Messages are signed by a **6-validator community set (threshold 4)** and relayed by an operator paid
   from an on-chain relayer-reward vault — no manual fees, no single point of control.
 - The original proposal's payment condition — production deployment, public verification and KYC —
@@ -57,7 +57,7 @@ The Hyperlane integration approved in #12200 is **complete and in production**:
 | Warp UI customised for Terra Classic (CW20 balances, `transfer_from` approvals) | ✅ https://bridge.terra-classic.io (also https://terraclassic-bridge.xyz) | [UI](https://github.com/terra-classic-hyperlane/UI) |
 | Complete documentation (install, validators, warp creation) | ✅ | [docs hub](README.md) |
 | KYC via SolidProof | ✅ | [certificate](https://github.com/solidproof/Projects/blob/main/2026/Igor%20Soares/KYC_Certificate_Igor_Soares.jpg) |
-| Multisig management of the bridge contracts | ✅ Safe 4-of-6 (EVM), Squads 4-of-6 (Solana) | §4.2–4.3 |
+| Multisig management of the bridge contracts | ✅ Safe 4-of-6 (EVM), Squads 4-of-6 (Solana) | §4.2 |
 
 **Delivered beyond the original scope:**
 
@@ -141,7 +141,7 @@ The two warp contracts have no admin at all. CosmWasm cannot assign an admin onc
 |---|---|---|
 | Warp **LUNC** (HypERC20) | [`0xA4bc47a4C5461eB0E59A585a21A1222EF7544Ac6`](https://etherscan.io/token/0xA4bc47a4C5461eB0E59A585a21A1222EF7544Ac6) | owner Safe · ProxyAdmin owned by Safe |
 | Warp **USTC** (HypERC20) | [`0xf49408beb319aeCe3E8B3550a5C750C19b3F1e51`](https://etherscan.io/token/0xf49408beb319aeCe3E8B3550a5C750C19b3F1e51) | owner Safe · ProxyAdmin owned by Safe |
-| ISM (4-of-6 multisig) | `0x3ba17675f0D319C89D70722f6eb07790DF0B254B` | ⏳ Safe is the *pending* owner (see §4.3) |
+| ISM (4-of-6 multisig) | `0x3ba17675f0D319C89D70722f6eb07790DF0B254B` | owner Safe |
 | IGP | `0x69b3A7C507014fd6E87E7b58a6b037e0EEe0e096` | owner Safe · fees go to the relayer-reward vault `0x04096dCBbBB0FA58a312761c38E1d3B9F64631F1` |
 | Warp hook (Merkle + IGP) | `0xDC9FF1B50d04792bf7730032F1763501D5669420` | immutable (no owner) |
 | Gas oracle | `0x3987cCE8f08037EBF93Ef3a934753540A94196cE` | oracle governor (validator-operator quorum) |
@@ -150,8 +150,8 @@ The two warp contracts have no admin at all. CosmWasm cannot assign an admin onc
 
 | Contract | Address | Controlled by |
 |---|---|---|
-| Warp **LUNC** (HypERC20) | [`0x481095ecEd7A907e7f390b6226F53a66D379e6e2`](https://bscscan.com/token/0x481095ecEd7A907e7f390b6226F53a66D379e6e2) | owner Safe · ⏳ ProxyAdmin still with the deployer (see §4.3) |
-| Warp **USTC** (HypERC20) | [`0xfC067fd98FD123fC2cAd72d040AF60a523274339`](https://bscscan.com/token/0xfC067fd98FD123fC2cAd72d040AF60a523274339) | owner Safe · ⏳ ProxyAdmin still with the deployer (see §4.3) |
+| Warp **LUNC** (HypERC20) | [`0x481095ecEd7A907e7f390b6226F53a66D379e6e2`](https://bscscan.com/token/0x481095ecEd7A907e7f390b6226F53a66D379e6e2) | owner Safe · ProxyAdmin owned by Safe |
+| Warp **USTC** (HypERC20) | [`0xfC067fd98FD123fC2cAd72d040AF60a523274339`](https://bscscan.com/token/0xfC067fd98FD123fC2cAd72d040AF60a523274339) | owner Safe · ProxyAdmin owned by Safe |
 | ISM (4-of-6 multisig) | `0xF6b0cDD33A7d2895a3F18b85569Ed9A8278cD151` | owner Safe |
 | IGP | `0xc3593dD54274A4CDa8fEBDa343A63A7331154138` | owner Safe · fees go to the relayer-reward vault `0x34E06a7793877EC5251b1dC230aD7cD577d231f4` |
 | Warp hook (Merkle + IGP) | `0x4AE5fd735Fe1a987756366F7FFeE754C061839d4` | immutable (no owner) |
@@ -171,21 +171,6 @@ on 2026-10-08).
 
 The Mailbox and ValidatorAnnounce on BSC, Ethereum and Solana are **Hyperlane's canonical deployments**,
 operated by Hyperlane, not by this project.
-
-### 4.3 Still to complete (disclosed openly)
-
-Three EVM controls were checked on-chain on 2026-10-08 and are **not yet with the multisig**:
-
-| Item | Current state | Action |
-|---|---|---|
-| BSC warp LUNC — ProxyAdmin `0x002a1821aff44c12084bc13f3c5cf442720c127c` | owner `0x8f085bAD1a15ee9ceeE58C83EFFFa72518975291` (deployer) | `transferOwnership` to the Safe |
-| BSC warp USTC — ProxyAdmin `0x60c92c612d0e7befd188043d557756fef07f725f` | owner `0x8f085bAD1a15ee9ceeE58C83EFFFa72518975291` (deployer) | `transferOwnership` to the Safe |
-| Ethereum ISM `0x3ba17675f0D319C89D70722f6eb07790DF0B254B` | owner `0xEF8181201Ce6C83120035Ffbcc11945E67Ba00ae` (deployer), **pending owner = Safe** | 4-of-6 Safe signers call `acceptOwnership` |
-
-I commit to completing all three. The transaction hashes will be published in
-[DEPLOY-HASHES.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/DEPLOY-HASHES.md),
-and the [monitor](https://monitor.terraclassic-bridge.xyz/) shows every owner and admin live, so the
-community can watch the change happen.
 
 ## 5. Open source, open to the community
 
