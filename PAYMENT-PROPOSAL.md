@@ -27,7 +27,8 @@ documents it summarises are:
 | 5 | [DEPLOY-HASHES.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/DEPLOY-HASHES.md) · [WARP-LUNC.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/WARP-LUNC.md) · [WARP-USTC.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/WARP-USTC.md) | byte-level inventory of every contract on all four chains, with verify commands |
 | 6 | [SOLANA-FUNDING-REPORT.md](https://github.com/terra-classic-hyperlane/docs/blob/main/SOLANA-FUNDING-REPORT.md) (proposal [#12222](https://finder.terraclassic.community/mainnet/proposal/12222)) | accountability for the 9,873,590 LUNC spent on Solana rent — every transaction, nothing to return |
 | 7 | [Documentation hub](https://github.com/terra-classic-hyperlane/docs/blob/main/README.md) ([github.com/terra-classic-hyperlane/docs](https://github.com/terra-classic-hyperlane/docs)) | validator, relayer, warp-route, fee and audit guides |
-| 8 | [Live bridge monitor](https://monitor.terraclassic-bridge.xyz/) ([JSON API](https://monitor.terraclassic-bridge.xyz/api/status)) | live validators, relayer, balances, IGP quotes and contract ownership |
+| 8 | [Official Hyperlane registry: chains/terraclassic](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains/terraclassic) · [PR #1559](https://github.com/hyperlane-xyz/hyperlane-registry/pull/1559) · [PR #1687](https://github.com/hyperlane-xyz/hyperlane-registry/pull/1687) (both merged) | Terra Classic and its LUNC/USTC warp routes are officially registered with Hyperlane |
+| 9 | [Live bridge monitor](https://monitor.terraclassic-bridge.xyz/) ([JSON API](https://monitor.terraclassic-bridge.xyz/api/status)) | live validators, relayer, balances, IGP quotes and contract ownership |
 
 ---
 
@@ -64,7 +65,13 @@ The Hyperlane integration approved in #12200 is **complete and in production**:
 - **Hyperlane explorer** adapted to Terra Classic: https://explorer.terraclassic-bridge.xyz ([repo](https://github.com/terra-classic-hyperlane/hyperlane-explorer)).
 - **Bridge monitor** ([hyperlane-monitoring](https://github.com/terra-classic-hyperlane/hyperlane-monitoring)): validators and checkpoints, relayer deliveries per route, operator balances, IGP quotes, contract owners and admins on every chain — https://monitor.terraclassic-bridge.xyz.
 - **Relayer-reward vault and governed gas oracle** (proof-of-delivery): users pay interchain gas on the origin chain, delivery proofs unlock the relayer's reward, and gas prices are approved by a quorum of validator operators before they are applied.
-- **Terra Classic in the official Hyperlane registry**: `columbus-5` became canonical with [hyperlane-registry PR #1559](https://github.com/hyperlane-xyz/hyperlane-registry/pull/1559) (2026-08-20).
+- **Officially registered with Hyperlane.** The Hyperlane team reviewed and merged both pull requests into
+  the official registry:
+  - [PR #1559](https://github.com/hyperlane-xyz/hyperlane-registry/pull/1559), merged 2026-08-20: Terra
+    Classic `columbus-5` becomes a canonical chain, see
+    [chains/terraclassic](https://github.com/hyperlane-xyz/hyperlane-registry/tree/main/chains/terraclassic).
+  - [PR #1687](https://github.com/hyperlane-xyz/hyperlane-registry/pull/1687), merged 2026-08-31: the LUNC
+    and USTC warp routes.
 - **Security fix**: the multisig-ISM duplicate-signature issue found by community researcher **Fragwuerdig** was fixed on Terra Classic through #12230.
 - **Token recognition**:
   - **Phantom** approved the LUNC and USTC Solana tokens.
