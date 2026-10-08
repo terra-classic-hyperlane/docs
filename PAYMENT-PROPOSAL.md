@@ -2,7 +2,7 @@
 
 # Hyperlane on Terra Classic — Delivery Report & Payment Proposal
 
-**Community Pool spend of 245,000,427.67 LUNC** for the completed integration approved in
+**Community Pool spend of 253,074,165.29 LUNC** for the completed integration approved in
 [proposal #12200](https://finder.terraclassic.community/mainnet/proposal/12200)
 
 *Terra Classic (`columbus-5`, Hyperlane domain 132556) ⇄ Ethereum · BNB Smart Chain · Solana*
@@ -208,10 +208,10 @@ maintained by more people than the original developer.
 
 | | |
 |---|---|
-| Amount | **245,000,427.67 LUNC** (`245000427670000uluna`) |
+| Amount | **253,074,165.29 LUNC** (`253074165290000uluna`) |
 | Source | Community Pool |
 | Recipient | `terra14yvuxm40affmkt36m2ummvzvlka25u3ucurxjl` |
-| Basis | the USD 12,000 budget approved in #12200 (USD 9,000 infrastructure + USD 3,000 Warp UI), converted at ≈ USD 0.0000490 per LUNC |
+| Basis | the USD 12,000 budget approved in #12200 (USD 9,000 infrastructure + USD 3,000 Warp UI), converted at ≈ USD 0.0000474 per LUNC |
 
 The payment covers only the scope approved in #12200. Solana deployment costs were funded separately
 through #12222 and are fully accounted for in [SOLANA-FUNDING-REPORT.md](https://github.com/terra-classic-hyperlane/docs/blob/main/SOLANA-FUNDING-REPORT.md).
