@@ -25,8 +25,8 @@ documents it summarises are:
 | 3 | [GOVERNANCE-PROPOSAL-CLAIM-OWNERSHIP-AUDIT.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/GOVERNANCE-PROPOSAL-CLAIM-OWNERSHIP-AUDIT.md) → on-chain [#12229](https://finder.terraclassic.community/mainnet/proposal/12229) (**passed** 2026-10-06) | `owner` of the Hyperlane infrastructure handed to on-chain governance |
 | 4 | [GOVERNANCE-PROPOSAL-MIGRATE-CONTRACTS-AUDIT.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/GOVERNANCE-PROPOSAL-MIGRATE-CONTRACTS-AUDIT.md) → on-chain [#12230](https://finder.terraclassic.community/mainnet/proposal/12230) (**passed** 2026-10-08) | every migratable contract moved to audited code with the multisig-ISM duplicate-signature fix (upstream #142) |
 | 5 | [DEPLOY-HASHES.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/DEPLOY-HASHES.md) · [WARP-LUNC.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/WARP-LUNC.md) · [WARP-USTC.md](https://github.com/terra-classic-hyperlane/cw-hyperlane/blob/main/terraclassic/doc/install/WARP-USTC.md) | byte-level inventory of every contract on all four chains, with verify commands |
-| 6 | [SOLANA-FUNDING-REPORT.md](SOLANA-FUNDING-REPORT.md) (proposal [#12222](https://finder.terraclassic.community/mainnet/proposal/12222)) | accountability for the 9,873,590 LUNC spent on Solana rent — every transaction, nothing to return |
-| 7 | [Documentation hub](README.md) ([github.com/terra-classic-hyperlane/docs](https://github.com/terra-classic-hyperlane/docs)) | validator, relayer, warp-route, fee and audit guides |
+| 6 | [SOLANA-FUNDING-REPORT.md](https://github.com/terra-classic-hyperlane/docs/blob/main/SOLANA-FUNDING-REPORT.md) (proposal [#12222](https://finder.terraclassic.community/mainnet/proposal/12222)) | accountability for the 9,873,590 LUNC spent on Solana rent — every transaction, nothing to return |
+| 7 | [Documentation hub](https://github.com/terra-classic-hyperlane/docs/blob/main/README.md) ([github.com/terra-classic-hyperlane/docs](https://github.com/terra-classic-hyperlane/docs)) | validator, relayer, warp-route, fee and audit guides |
 | 8 | [Live bridge monitor](https://monitor.terraclassic-bridge.xyz/) ([JSON API](https://monitor.terraclassic-bridge.xyz/api/status)) | live validators, relayer, balances, IGP quotes and contract ownership |
 
 ---
@@ -52,10 +52,10 @@ The Hyperlane integration approved in #12200 is **complete and in production**:
 |---|---|---|
 | Hyperlane core on Terra Classic: Mailbox, IGP, ValidatorAnnounce, ISMs, hooks | ✅ live, owner + admin = governance | §4.1 |
 | Validators | ✅ 6 community validators, threshold 4 | §3 |
-| Relayer for cross-chain delivery | ✅ running, paid by the relayer-reward vault ([proof-of-delivery](https://github.com/terra-classic-hyperlane/proof-of-delivery)) | [RELAYER-OPERATOR.md](RELAYER-OPERATOR.md) |
+| Relayer for cross-chain delivery | ✅ running, paid by the relayer-reward vault ([proof-of-delivery](https://github.com/terra-classic-hyperlane/proof-of-delivery)) | [RELAYER-OPERATOR.md](https://github.com/terra-classic-hyperlane/docs/blob/main/RELAYER-OPERATOR.md) |
 | Bridge contracts: LUNC and USTC to ETH, BSC, Solana | ✅ live | §4.2 |
 | Warp UI customised for Terra Classic (CW20 balances, `transfer_from` approvals) | ✅ https://bridge.terra-classic.io (also https://terraclassic-bridge.xyz) | [UI](https://github.com/terra-classic-hyperlane/UI) |
-| Complete documentation (install, validators, warp creation) | ✅ | [docs hub](README.md) |
+| Complete documentation (install, validators, warp creation) | ✅ | [docs hub](https://github.com/terra-classic-hyperlane/docs/blob/main/README.md) |
 | KYC via SolidProof | ✅ | [certificate](https://github.com/solidproof/Projects/blob/main/2026/Igor%20Soares/KYC_Certificate_Igor_Soares.jpg) |
 | Multisig management of the bridge contracts | ✅ Safe 4-of-6 (EVM), Squads 4-of-6 (Solana) | §4.2 |
 
@@ -207,7 +207,7 @@ maintained by more people than the original developer.
 | Basis | the USD 12,000 budget approved in #12200 (USD 9,000 infrastructure + USD 3,000 Warp UI), converted at ≈ USD 0.0000490 per LUNC |
 
 The payment covers only the scope approved in #12200. Solana deployment costs were funded separately
-through #12222 and are fully accounted for in [SOLANA-FUNDING-REPORT.md](SOLANA-FUNDING-REPORT.md).
+through #12222 and are fully accounted for in [SOLANA-FUNDING-REPORT.md](https://github.com/terra-classic-hyperlane/docs/blob/main/SOLANA-FUNDING-REPORT.md).
 The explorer, the monitor, the reward vault, the registry listing and the security migration are
 included at no extra cost.
 
