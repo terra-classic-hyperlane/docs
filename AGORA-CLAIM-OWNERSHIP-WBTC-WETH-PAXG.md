@@ -88,6 +88,6 @@ The `init_ownership_transfer` and admin transactions (2026-11-19):
 
 ## Deposit
 
-The proposal will be submitted with an initial deposit of 100,000 LUNC. The minimum to enter the voting period is 5,000,000 LUNC; any wallet can top it up within the 14-day deposit period. Voting period: 7 days.
+The proposal will be submitted with an initial deposit of 1,000,000 LUNC (the chain-enforced minimum initial deposit, 20% of the total). The minimum to enter the voting period is 5,000,000 LUNC; any wallet can top it up within the 14-day deposit period. Voting period: 7 days.
 
 Questions and review are welcome in this thread before the on-chain submission.
