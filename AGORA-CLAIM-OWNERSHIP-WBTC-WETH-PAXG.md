@@ -2,6 +2,7 @@
 
 **Type:** on-chain governance proposal (3 × `MsgExecuteContract`, executed by the x/gov module account)
 **Proposer:** Igor Veras (Terra Classic Hyperlane bridge operator)
+**On-chain:** proposal **#12240**, submitted 2026-11-19 (tx `14F36B57E7835F5046BE2192BCD76F68BC3DF007C4293DF827D32AC58D3A1299`), deposit period until 2026-12-03 14:12 UTC — https://terra-classic-lcd.publicnode.com/cosmos/gov/v1/proposals/12240
 **Precedent:** proposal #12229, which handed the Hyperlane mailbox, ISMs, hooks, IGP and the LUNC/USTC routes to governance
 
 ## Summary
@@ -88,6 +89,6 @@ The `init_ownership_transfer` and admin transactions (2026-11-19):
 
 ## Deposit
 
-The proposal will be submitted with an initial deposit of 1,000,000 LUNC (the chain-enforced minimum initial deposit, 20% of the total). The minimum to enter the voting period is 5,000,000 LUNC; any wallet can top it up within the 14-day deposit period. Voting period: 7 days.
+Proposal #12240 was submitted with an initial deposit of 1,000,000 LUNC (the chain-enforced minimum initial deposit, 20% of the total). The minimum to enter the voting period is 5,000,000 LUNC; any wallet can top it up within the 14-day deposit period. Voting period: 7 days.
 
 Questions and review are welcome in this thread before the on-chain submission.
