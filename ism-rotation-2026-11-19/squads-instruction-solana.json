@@ -1,0 +1,42 @@
+{
+ "program_id": "4MzF7HCfxuwj4EFHqZSEpvkcZZvv1mF37DP4pDHwR5VQ",
+ "instruction": "SetValidatorsAndThreshold(domain 132556, 6 validators, threshold 4)",
+ "accounts": [
+  {
+   "pubkey": "UyvAB4vzpbzUfSQP4uStLPz2Td1coSJcosCRGV4vHmr",
+   "signer": true,
+   "writable": true,
+   "role": "owner (Squads vault) / payer"
+  },
+  {
+   "pubkey": "3v1B25oUxUKSQAF69pbCxb8U8ZcSUEDUcwbB2ShiBE1r",
+   "signer": false,
+   "writable": false,
+   "role": "access_control PDA"
+  },
+  {
+   "pubkey": "7YypjZXNWQhRGJXr1TWZYaf4PdiFSmbbrANGieFUV1gJ",
+   "signer": false,
+   "writable": true,
+   "role": "domain_data PDA (domain 132556)"
+  },
+  {
+   "pubkey": "11111111111111111111111111111111",
+   "signer": false,
+   "writable": false,
+   "role": "system program"
+  }
+ ],
+ "data_base58": "2UhTSbL61p8xPTrwE1WCLmL7XBMr2kbvBCS8zZf3Pca4Ap4GgjPvT6tW4JSUPN4qT1HhSw7ymGWzVdmYUQ2WSnpPsWB3HzDZ2UsAkqcSVEjFAG4TfuHNHdYAdRZZNiMsShaq1byPDf2chZrA27kHEgtx7wNes6aRhsLaBJcgjbH48Mp5b3ff4sq1XA5h",
+ "data_hex": "010101010101010101cc05020006000000841ecf88f93ac4eb7e4a0e6854d1b6e0bae8ce571afd3d07abd2aaa19a9f7993f334a926e253b90ce6bb040164a0ebbcb7e2d584f066c8b57dd743835c374754892ebac52702475726b67f822efdfacc0c737caf34a1b8ae4a285c5e94726de6d9b7e028a10f3648366fe14b2e6253a0aebb9103512fa80804",
+ "data_len": 138,
+ "validators": [
+  "0x841ecf88f93aC4Eb7E4a0E6854d1b6E0bAE8CE57",
+  "0x1Afd3D07ABD2Aaa19a9F7993f334A926E253b90c",
+  "0xe6BB040164A0ebbcB7E2d584f066C8b57DD74383",
+  "0x5c374754892ebac52702475726b67F822eFdFacC",
+  "0x0c737CAF34a1b8ae4A285C5E94726De6D9B7E028",
+  "0xA10F3648366fE14b2e6253A0aeBB9103512Fa808"
+ ],
+ "threshold": 4
+}

@@ -1,0 +1,40 @@
+{
+ "version": "1.0",
+ "chainId": "1",
+ "createdAt": 1795082967047,
+ "meta": {
+  "name": "TC validator rotation ethereum: 0x71b2 -> 0x841ecf88",
+  "description": "setValidatorsAndThreshold on the Terra Classic StorageMessageIdMultisigIsm: replace the retired validator 0x71B2B8C3... by 0x841ecf88f93aC4Eb7E4a0E6854d1b6E0bAE8CE57, keep the other 5 and threshold 4",
+  "txBuilderVersion": "1.16.5",
+  "createdFromSafeAddress": "0x4d78A2182a7Cd3a370D73E6651EF4B32C2dd8BDb",
+  "createdFromOwnerAddress": "",
+  "checksum": ""
+ },
+ "transactions": [
+  {
+   "to": "0x3ba17675f0D319C89D70722f6eb07790DF0B254B",
+   "value": "0",
+   "data": null,
+   "contractMethod": {
+    "inputs": [
+     {
+      "internalType": "address[]",
+      "name": "_validators",
+      "type": "address[]"
+     },
+     {
+      "internalType": "uint8",
+      "name": "_threshold",
+      "type": "uint8"
+     }
+    ],
+    "name": "setValidatorsAndThreshold",
+    "payable": false
+   },
+   "contractInputsValues": {
+    "_validators": "[0x841ecf88f93aC4Eb7E4a0E6854d1b6E0bAE8CE57,0x1Afd3D07ABD2Aaa19a9F7993f334A926E253b90c,0xe6BB040164A0ebbcB7E2d584f066C8b57DD74383,0x5c374754892ebac52702475726b67F822eFdFacC,0x0c737CAF34a1b8ae4A285C5E94726De6D9B7E028,0xA10F3648366fE14b2e6253A0aeBB9103512Fa808]",
+    "_threshold": "4"
+   }
+  }
+ ]
+}

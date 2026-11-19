@@ -1,0 +1,41 @@
+{
+  "title": "Claim ownership of the WBTC, WETH and PAXG warp routes for governance",
+  "summary": "Governance claims ownership (claim_ownership) of the three Hyperlane warp routers on Terra Classic for WBTC, WETH and PAXG (Ethereum <> Terra Classic), completing the two-step hpl_ownable handoff already approved for the mailbox, ISMs, hooks, IGP and the LUNC/USTC routes in proposal #12229. These are third-party assets, so their bridge contracts should belong to the community through governance, not to a single operator: after this proposal the ISM, hook and routes of these contracts can only be changed by a community vote. The owner has already proposed governance (terra10d07y265gmmuvt4z0w9aw880jnsr700juxf95n) as next owner and moved the contract admin to governance. Nothing else changes. Contracts, verification steps and transactions: https://discourse.luncgoblins.com/t/claim-ownership-of-the-wbtc-weth-and-paxg-warp-routes-for-governance/606",
+  "messages": [
+    {
+      "@type": "/cosmwasm.wasm.v1.MsgExecuteContract",
+      "sender": "terra10d07y265gmmuvt4z0w9aw880jnsr700juxf95n",
+      "contract": "terra1gepfs6d5kp6uvpq3w8s65n3fz77tuceze962wel50tznenq49ckssgt4s7",
+      "msg": {
+        "ownable": {
+          "claim_ownership": {}
+        }
+      },
+      "funds": []
+    },
+    {
+      "@type": "/cosmwasm.wasm.v1.MsgExecuteContract",
+      "sender": "terra10d07y265gmmuvt4z0w9aw880jnsr700juxf95n",
+      "contract": "terra14nna7hca7t9h7u39gumlplw92j7syavull70ju0haz80akqcsxsqp5s2kr",
+      "msg": {
+        "ownable": {
+          "claim_ownership": {}
+        }
+      },
+      "funds": []
+    },
+    {
+      "@type": "/cosmwasm.wasm.v1.MsgExecuteContract",
+      "sender": "terra10d07y265gmmuvt4z0w9aw880jnsr700juxf95n",
+      "contract": "terra1k099akkvt99hr8f633ywecwmk4c2etcgg9y8lead24qxseq97mnspxzlyq",
+      "msg": {
+        "ownable": {
+          "claim_ownership": {}
+        }
+      },
+      "funds": []
+    }
+  ],
+  "deposit": "100000000000uluna",
+  "expedited": false
+}
